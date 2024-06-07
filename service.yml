@@ -1,0 +1,34 @@
+name: gotenberg
+icon: gotenberg
+type: service
+title: Gotenberg
+hostname: gotenberg
+containers:
+- name: gotenberg
+  image: gotenberg/gotenberg
+options:
+- version: '8'
+  tag: '8.6.0'
+endpoints:
+- name: gotenberg
+  ports:
+  - name: gotenberg
+    number: 3000
+    type: http
+labels:
+- gotenberg
+- print
+
+helm:
+  name: wodby
+  source: oci://registry-1.docker.io/wodby/gotenberg
+  chart: oci://registry-1.docker.io/wodby/gotenberg
+  version: 0.1.0
+  configurations:
+  - name: gotenberg
+    labels: podLabels
+    annotations: podAnnotations
+    env: envVars
+    resources: resources
+    volumes: volumes
+    mounts: volumeMounts
