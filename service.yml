@@ -2,7 +2,6 @@ name: gotenberg
 icon: gotenberg
 type: service
 title: Gotenberg
-hostname: gotenberg
 containers:
 - name: gotenberg
   image: gotenberg/gotenberg
