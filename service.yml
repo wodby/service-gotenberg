@@ -2,9 +2,6 @@ name: gotenberg
 icon: gotenberg
 type: service
 title: Gotenberg
-containers:
-- name: gotenberg
-  image: gotenberg/gotenberg
 options:
 - version: '8'
   tag: '8.6.0'
@@ -23,11 +20,18 @@ helm:
   source: oci://registry-1.docker.io/wodby/gotenberg
   chart: oci://registry-1.docker.io/wodby/gotenberg
   version: 0.1.0
-  configurations:
-  - container: gotenberg
+workloads:
+- id: main
+  kind: deployment
+  primary: true
+  containers:
+  - name: gotenberg
+    image: gotenberg/gotenberg
+    helm:
+      resources: resources
+      env: envVars
+      mounts: extraVolumeMounts
+  helm:
     labels: podLabels
     annotations: podAnnotations
-    env: envVars
-    resources: resources
     volumes: extraVolumes
-    mounts: extraVolumeMounts
