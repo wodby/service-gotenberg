@@ -20,10 +20,15 @@ helm:
   source: oci://registry-1.docker.io/wodby/gotenberg
   chart: oci://registry-1.docker.io/wodby/gotenberg
   version: 0.1.0
+
 workloads:
 - id: main
   kind: deployment
   primary: true
+  helm:
+    labels: podLabels
+    annotations: podAnnotations
+    volumes: extraVolumes
   containers:
   - name: gotenberg
     image: gotenberg/gotenberg
@@ -31,7 +36,3 @@ workloads:
       resources: resources
       env: envVars
       mounts: extraVolumeMounts
-  helm:
-    labels: podLabels
-    annotations: podAnnotations
-    volumes: extraVolumes
