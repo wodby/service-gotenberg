@@ -4,7 +4,7 @@ type: service
 title: Gotenberg
 options:
 - version: '8'
-  tag: '8.6.0'
+  tag: '8.34.0'
 endpoints:
 - name: gotenberg
   ports:
