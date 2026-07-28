@@ -36,7 +36,7 @@ configuration for Gotenberg.
 | Workloads | `main` (Deployment), primary |
 | Containers | `gotenberg` using `gotenberg/gotenberg` |
 | Endpoints | `gotenberg`: HTTP 3000 |
-| Helm | chart `oci://registry-1.docker.io/wodby/gotenberg`; version `0.1.0` |
+| Helm | chart `oci://registry-1.docker.io/wodby/gotenberg`; version `0.1.1` |
 
 ## Use this service
 
