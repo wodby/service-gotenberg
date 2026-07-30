@@ -2,6 +2,7 @@ name: gotenberg
 icon: gotenberg
 type: service
 title: Gotenberg
+scalable: true
 options:
 - version: '8'
   tag: '8.34.0'
@@ -19,9 +20,10 @@ helm:
   name: wodby
   source: oci://registry-1.docker.io/wodby/gotenberg
   chart: oci://registry-1.docker.io/wodby/gotenberg
-  version: 0.1.1
+  version: 0.1.2
   valueMappings:
     serviceAccountName: serviceAccount.name
+    serviceAccountCreate: serviceAccount.create
 
 workloads:
 - name: main
