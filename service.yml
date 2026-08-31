@@ -28,7 +28,7 @@ helm:
   name: wodby
   source: oci://registry-1.docker.io/wodby/gotenberg
   chart: oci://registry-1.docker.io/wodby/gotenberg
-  version: 0.2.1
+  version: 0.2.2
   valueMappings:
     serviceAccountName: serviceAccount.name
     serviceAccountCreate: serviceAccount.create
