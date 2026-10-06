@@ -2,6 +2,7 @@ name: gotenberg
 icon: gotenberg
 type: service
 title: Gotenberg
+guidance: GUIDANCE.md
 scalable: true
 options:
 - version: '8'
