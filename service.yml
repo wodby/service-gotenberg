@@ -6,7 +6,7 @@ guidance: GUIDANCE.md
 scalable: true
 options:
 - version: '8'
-  tag: '8.37.0'
+  tag: '8.38.1'
 endpoints:
 - name: gotenberg
   ports:
