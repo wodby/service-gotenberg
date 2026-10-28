@@ -1,6 +1,7 @@
 name: gotenberg
 icon: gotenberg
 type: service
+basicAuth: true
 title: Gotenberg
 guidance: GUIDANCE.md
 scalable: true
