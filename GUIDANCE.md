@@ -21,4 +21,4 @@ What Wodby sets up for this Gotenberg service. It runs the official `gotenberg/g
 
 ## Basic auth
 
-Wodby protects this service's public domains with basic auth by default, because Gotenberg has no authentication of its own and fetches the URLs it is given. Each app service of it gets its own generated password, which members reveal on the environment's Domains > Auths page. Applications inside the environment call it directly and need no credentials; only clients outside the environment send the username and password.
+Wodby protects this service's public domains with basic auth by default, because Gotenberg has no authentication of its own and fetches the URLs it is given. Each app service of it gets its own generated password, which members reveal on the environment's Endpoints > Auths page. Applications inside the environment call it directly and need no credentials; only clients outside the environment send the username and password.
