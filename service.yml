@@ -49,6 +49,8 @@ workloads:
   containers:
   - name: gotenberg
     image: gotenberg/gotenberg
+    resources:
+      preset: nano
     helm:
       resources: resources
       env: envVars
