@@ -8,6 +8,12 @@ What Wodby sets up for this Gotenberg service. It runs the official `gotenberg/g
 - No catalog service declares a link to it, so no variable with its address is set automatically. Put the base URL into the application's own configuration or a variable of the application service, and read it from there.
 - Conversions are multipart `POST` requests to a route per conversion type, for example `/forms/chromium/convert/url`, `/forms/chromium/convert/html` (with an `index.html` file) and `/forms/libreoffice/convert`. A client written for another PDF service does not work by changing only the host and port.
 
+## Versions
+
+- `8` is the default; `9` is offered next to it. The image, user, port `3000`, `/health` and `/version` are the same in both.
+- The Chromium and LibreOffice conversion routes keep their paths in 9, but some form fields changed. `/forms/pdfengines/*` routes moved to `/forms/pdf/*`, and post-processing fields such as `merge`, `pdfa` or `metadata` became entries of a `stages` list. A removed route answers `404` and a moved field `400`, each naming the replacement. Check the application's client against Gotenberg's upgrade guide before switching it to 9.
+- Gotenberg 9 no longer ships Java, Python, pdfcpu, QPDF, pdftk or ExifTool, so their vulnerabilities no longer show up for this image.
+
 ## Things that matter in an environment
 
 - Gotenberg fetches the page itself. A URL passed for conversion must be reachable from the Gotenberg container: use an address that resolves inside the environment or a public one, and pass cookies or headers the page needs with the request.

@@ -32,7 +32,7 @@ configuration for Gotenberg.
 | --- | --- |
 | Service name | `gotenberg` |
 | Type | Application service |
-| Versions | `8` by default |
+| Versions | `9`, `8`; `8` by default |
 | Workloads | `main` (Deployment), primary |
 | Containers | `gotenberg` using `gotenberg/gotenberg` |
 | Endpoints | `gotenberg`: HTTP 3000 |

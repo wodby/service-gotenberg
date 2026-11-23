@@ -6,9 +6,13 @@ title: Gotenberg
 guidance: GUIDANCE.md
 scalable: true
 options:
+- version: '9'
+  tag: '9.9.3'
+  digest: sha256:9731688d1b6290e4c04d9a47dbd5fb29f92aa0076feb6592c5c777525892cd72
 - version: '8'
   tag: '8.40.0'
   digest: sha256:53073e798c8ef39ea2187e44cb67bab77894ea2509100b94c4fe3b461f7b2996
+  default: true
 endpoints:
 - name: gotenberg
   ports:
