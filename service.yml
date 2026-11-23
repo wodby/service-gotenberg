@@ -13,6 +13,7 @@ options:
   tag: '8.40.0'
   digest: sha256:53073e798c8ef39ea2187e44cb67bab77894ea2509100b94c4fe3b461f7b2996
   default: true
+  eol: '2026-11-05T00:00:00+00:00'
 endpoints:
 - name: gotenberg
   ports:
