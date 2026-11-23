@@ -11,6 +11,7 @@ What Wodby sets up for this Gotenberg service. It runs the official `gotenberg/g
 ## Versions
 
 - `8` is the default; `9` is offered next to it. The image, user, port `3000`, `/health` and `/version` are the same in both.
+- `8` reached end of life on 2026-11-05: Gotenberg patches only its latest version, and 8.40.0 is the last 8.x release. New applications should use `9`.
 - The Chromium and LibreOffice conversion routes keep their paths in 9, but some form fields changed. `/forms/pdfengines/*` routes moved to `/forms/pdf/*`, and post-processing fields such as `merge`, `pdfa` or `metadata` became entries of a `stages` list. A removed route answers `404` and a moved field `400`, each naming the replacement. Check the application's client against Gotenberg's upgrade guide before switching it to 9.
 - Gotenberg 9 no longer ships Java, Python, pdfcpu, QPDF, pdftk or ExifTool, so their vulnerabilities no longer show up for this image.
 
